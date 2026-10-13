@@ -1,0 +1,36 @@
+﻿@model EmployeeManagement.Models.Employee
+
+<div class="container mt-4">
+
+    <h1>Edit Employee</h1>
+
+    <form asp-action="Edit" method="post">
+
+        <input asp-for="Id" type="hidden" />
+
+        <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input asp-for="FirstName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input asp-for="LastName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Department</label>
+            <input asp-for="Department" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Update Employee
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancel
+        </a>
+
+    </form>
+
+</div>
